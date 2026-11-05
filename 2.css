@@ -1,0 +1,553 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Itim', cursive;
+    background: #fff7fa;
+    color: #bd547c;
+    overflow-x: hidden;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* ซ่อนเนื้อหา */
+.hidden {
+    display: none !important;
+}
+
+/* หน้าล็อกอิน */
+.lock-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: linear-gradient(135deg, #ffe0ec, #fff5f8, #ffd6e5);
+}
+
+.lock-card {
+    width: 100%;
+    max-width: 410px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 15px 50px #e9a6bf66;
+    animation: appear 1s ease;
+}
+
+.lock-heart {
+    font-size: 65px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #d77a9b;
+    margin: 12px 0;
+}
+
+.lock-card h1 {
+    font-size: 38px;
+    color: #e45c91;
+    margin-bottom: 10px;
+}
+
+.lock-card > p {
+    font-size: 17px;
+}
+
+.lock-icon {
+    font-size: 35px;
+    margin: 25px 0;
+}
+
+.lock-card label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.lock-card input {
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    border: 2px solid #f5bfd1;
+    border-radius: 15px;
+    font-size: 18px;
+    color: #bd547c;
+    outline: none;
+    background: #fff9fb;
+}
+
+.lock-card input:focus {
+    border-color: #e45c91;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #ee78a5, #df578b);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 19px;
+    box-shadow: 0 5px 15px #e99ab8;
+    transition: 0.3s;
+}
+
+.lock-card .primary-btn {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #e99ab8;
+}
+
+.error-message {
+    color: #e05276;
+    font-size: 15px !important;
+    min-height: 25px;
+    margin-top: 12px;
+}
+
+.lock-hint {
+    color: #c88ba2;
+    font-size: 14px !important;
+    margin-top: 10px;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(circle at 20% 20%, #fff 0, transparent 25%),
+        linear-gradient(135deg, #ffe0ec, #fff1f5, #ffd6e5);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.top-heart {
+    font-size: 70px;
+    display: block;
+    animation: heartbeat 1.3s infinite;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 8vw, 65px);
+    color: #e45c91;
+    margin: 10px 0;
+}
+
+.couple-names {
+    font-size: clamp(23px, 5vw, 36px);
+    color: #bd547c;
+    margin: 20px 0;
+}
+
+.hero-description {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.scroll-hint {
+    margin-top: 55px;
+    color: #c27d99;
+    animation: bob 2s infinite;
+}
+
+/* หัวข้อแต่ละส่วน */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading > span {
+    font-size: 40px;
+}
+
+.section-heading h2 {
+    color: #e45c91;
+    font-size: clamp(30px, 6vw, 40px);
+    margin: 10px 0;
+}
+
+.section-heading p {
+    font-size: 18px;
+}
+
+/* ตัวนับ */
+.counter-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: #fff9fb;
+}
+
+.counter-card {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px 20px;
+    border-radius: 25px;
+    background: white;
+    box-shadow: 0 8px 30px #e9a6bf55;
+}
+
+.counter-card > p {
+    font-size: 19px;
+}
+
+.timer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.timer-box {
+    background: #fff0f5;
+    border-radius: 17px;
+    padding: 20px 5px;
+}
+
+.timer-box span {
+    display: block;
+    font-size: clamp(25px, 5vw, 40px);
+    color: #e45c91;
+}
+
+.timer-box small {
+    font-size: 16px;
+    color: #c27d99;
+}
+
+.anniversary-date {
+    color: #e45c91;
+    margin-bottom: 10px;
+}
+
+/* รูปภาพ */
+.memories-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(#fff0f5, #fff8fa);
+}
+
+.photo-gallery {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.photo-card {
+    width: min(100%, 280px);
+    background: white;
+    padding: 12px 12px 20px;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px #e9a6bf66;
+    transition: 0.35s;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px) rotate(-2deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.photo-card p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.photo-note {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #c58da3;
+}
+
+/* จดหมาย */
+.letter-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: #ffe8f0;
+}
+
+.envelope-area {
+    padding-top: 25px;
+}
+
+.envelope {
+    position: relative;
+    width: 250px;
+    height: 170px;
+    margin: 40px auto 30px;
+    cursor: pointer;
+    perspective: 900px;
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #f4a1be;
+    border-radius: 5px;
+}
+
+.letter-paper {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+    background: #fffdfd;
+    color: #e45c91;
+    padding: 20px;
+    z-index: 2;
+    transition: 0.8s;
+}
+
+.letter-paper span {
+    font-size: 30px;
+}
+
+.letter-paper p {
+    font-size: 20px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-top: 100px solid #e982a8;
+    transform-origin: top;
+    transition: 0.6s;
+    z-index: 4;
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #f6b0c8;
+    clip-path: polygon(0 100%, 50% 48%, 100% 100%);
+    z-index: 3;
+}
+
+.envelope-heart {
+    position: absolute;
+    z-index: 5;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: #e45c91;
+    pointer-events: none;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope.open .letter-paper {
+    transform: translateY(-115px);
+}
+
+.click-hint {
+    font-size: 17px;
+}
+
+.love-message {
+    display: none;
+    max-width: 570px;
+    margin: 50px auto 0;
+    padding: 35px 28px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 30px #e9a6bf66;
+    font-size: 18px;
+    line-height: 2;
+    text-align: left;
+}
+
+.love-message.show {
+    display: block;
+    animation: appear 1s ease;
+}
+
+.love-message h3 {
+    text-align: center;
+    color: #e45c91;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.message-decoration {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.love-message strong {
+    color: #e45c91;
+}
+
+.signature {
+    text-align: right;
+    color: #e45c91;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+/* ส่วนท้าย */
+.final-section {
+    padding: 90px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffd6e5, #fff0f5);
+}
+
+.final-heart {
+    font-size: 70px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.final-section h2 {
+    color: #e45c91;
+    font-size: clamp(27px, 6vw, 40px);
+    margin: 15px 0;
+}
+
+.final-section p {
+    font-size: 19px;
+    margin: 10px;
+}
+
+.final-signature {
+    font-size: 27px !important;
+    color: #e45c91;
+}
+
+/* เพลง */
+.music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+    padding: 13px 20px;
+    background: #e96d9b;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px #e8a8bf;
+}
+
+/* หัวใจลอย */
+#heartsContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 15;
+}
+
+.floating-heart {
+    position: absolute;
+    bottom: -40px;
+    animation: floatUp linear forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.85;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* มือถือ */
+@media (max-width: 600px) {
+    .lock-card {
+        padding: 35px 20px;
+    }
+
+    .timer-grid {
+        gap: 7px;
+    }
+
+    .timer-box {
+        padding: 15px 3px;
+    }
+
+    .photo-card {
+        width: min(100%, 330px);
+    }
+
+    .love-message {
+        padding: 25px 20px;
+        font-size: 16px;
+    }
+
+    .music-button {
+        bottom: 12px;
+        right: 12px;
+    }
+}

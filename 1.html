@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffe5ef">
+    <title>Pakorn ❤️ Natnicha | Anniversary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+
+    <!-- หน้าล็อกรหัสผ่าน -->
+    <section class="lock-screen" id="lockScreen">
+        <div class="lock-card">
+            <div class="lock-heart">💗</div>
+            <p class="eyebrow">A SPECIAL SURPRISE</p>
+            <h1>For Natnicha</h1>
+            <p>มีของขวัญเล็ก ๆ รอหนูอยู่นะ</p>
+
+            <div class="lock-icon">🔐</div>
+
+            <label for="passwordInput">ใส่รหัสจ้าาาา</label>
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="YYYY-MM-DD"
+                autocomplete="off"
+            >
+
+            <button class="primary-btn" id="unlockButton">
+                เปิดของขวัญ 💌
+            </button>
+
+            <p class="error-message" id="errorMessage"></p>
+            <p class="lock-hint">คำใบ้: วันพิเศษของเราสองคน ♡</p>
+        </div>
+    </section>
+
+    <!-- เว็บไซต์หลัก -->
+    <main id="mainContent" class="hidden">
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="top-heart">♡</span>
+                <p class="eyebrow">A DAY TO REMEMBER</p>
+
+                <h1>Happy Anniversary</h1>
+
+                <div class="couple-names">
+                    Pakorn <span>❤️</span> Natnicha
+                </div>
+
+                <p class="hero-description">
+                    ขอบคุณที่เข้ามาทำให้โลกของพี่สวยงามขึ้นนะ
+                </p>
+
+                <button class="primary-btn" id="surpriseButton">
+                    เริ่มเซอร์ไพรส์เลย 💗
+                </button>
+
+                <div class="scroll-hint">เลื่อนลงไปดูความรักของเรานะ ↓</div>
+            </div>
+        </section>
+
+        <!-- ตัวนับวัน -->
+        <section class="counter-section" id="counter">
+            <div class="section-heading">
+                <span>💕</span>
+                <h2>Our Special Day</h2>
+                <p>ทุกวินาทีมีความหมาย เพราะมีเธออยู่ด้วย</p>
+            </div>
+
+            <div class="counter-card">
+                <p id="counterTitle">นับถอยหลังสู่วันครบรอบของเรา</p>
+
+                <div class="timer-grid">
+                    <div class="timer-box">
+                        <span id="days">00</span>
+                        <small>วัน</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="hours">00</span>
+                        <small>ชั่วโมง</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="minutes">00</span>
+                        <small>นาที</small>
+                    </div>
+                    <div class="timer-box">
+                        <span id="seconds">00</span>
+                        <small>วินาที</small>
+                    </div>
+                </div>
+
+                <p class="anniversary-date">
+                    📅 November 6, 2026
+                </p>
+                <p id="counterMessage">อีกไม่นานก็ถึงวันพิเศษของเราแล้ว 💗</p>
+            </div>
+        </section>
+
+        <!-- รูปภาพความทรงจำ -->
+        <section class="memories-section" id="memories">
+            <div class="section-heading">
+                <span>📸</span>
+                <h2>Our Memories</h2>
+                <p>ความทรงจำเล็ก ๆ ที่มีค่ามากมาย</p>
+            </div>
+
+            <div class="photo-gallery">
+                <div class="photo-card">
+                    <img
+                        src="4.jpg"
+                        alt="ความทรงจำของเรา"
+                        loading="lazy"
+                    >
+                    <p>รอยยิ้มที่พี่รัก 💕</p>
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="5.jpg"
+                        alt="ช่วงเวลาดี ๆ"
+                        loading="lazy"
+                    >
+                    <p>วันที่มีความสุข 🌷</p>
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="6.jpg"
+                        alt="ความรักของเรา"
+                        loading="lazy"
+                    >
+                    <p>อยากมีหนูไปนาน ๆ 💗</p>
+                </div>
+            </div>
+
+            <p class="photo-note">
+                คิดถึงนะ
+            </p>
+        </section>
+
+        <!-- จดหมายรัก -->
+        <section class="letter-section" id="letter">
+            <div class="section-heading">
+                <span>💌</span>
+                <h2>A Letter For You</h2>
+                <p>มีบางอย่างที่ Pakorn อยากบอก Natnicha</p>
+            </div>
+
+            <div class="envelope-area">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-back"></div>
+
+                    <div class="letter-paper">
+                        <span>💗</span>
+                        <p>To My Love</p>
+                    </div>
+
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-front"></div>
+                    <div class="envelope-heart">♥</div>
+                </div>
+
+                <p class="click-hint" id="clickHint">
+                    แตะที่ซองจดหมายเพื่อเปิดนะ ♡
+                </p>
+            </div>
+
+            <article class="love-message" id="loveMessage">
+                <div class="message-decoration">🌷 💗 🌷</div>
+
+                <h3>ถึง Natnicha คนพิเศษของ Pakorn</h3>
+
+                <p>
+                    สุขสันต์วันครบรอบนะคนเก่ง 💖
+                    <br><br>
+
+                    ขอบคุณนะคะที่เข้ามาเป็นส่วนหนึ่งในชีวิตของพี่
+                    ขอบคุณที่ทำให้ทุกวันมีความสุขนะ
+                    และขอบคุณที่ยังจับมือกันมาจนถึงวันนี้
+                    <br><br>
+
+                    พี่อาจไม่ใช่คนที่สมบูรณ์แบบ
+                    อาจมีบางครั้งที่ทำให้หนูน้อยใจ
+                    แต่พี่อยากให้รู้ว่าหนูเป็นคนสำคัญมาก ๆ
+                    สำหรับพี่เสมอ
+                    <br><br>
+
+                    อยากอยู่ข้าง ๆ หนูในวันที่มีความสุข
+                    และอยากเป็นกำลังใจให้หนูในวันที่เหนื่อย
+                    อยากสร้างความทรงจำดี ๆ ด้วยกันไปอีกเยอะ ๆ
+                    <br><br>
+
+                    ขอให้เรายังมีกันแบบนี้ไปนาน ๆ
+                    เติบโตไปด้วยกัน จับมือกัน
+                    และรักกันให้มากขึ้นในทุก ๆ วันนะคะ
+                    <br><br>
+
+                    <strong>พี่ รัก หนู มากที่สุดเลยนะ 💗</strong>
+                </p>
+
+                <div class="signature">
+                    Forever Yours ♡
+                    <br>
+                    From Pakorn
+                </div>
+            </article>
+        </section>
+
+        <!-- ปิดท้าย -->
+        <section class="final-section">
+            <div class="final-heart">💖</div>
+            <h2>You're My Favorite Person</h2>
+            <p>ขอบคุณที่เป็นความสุขของพี่นะ Natnicha</p>
+            <p class="final-signature">Pakorn ❤️ Natnicha</p>
+            <p>Forever & Always ♡</p>
+        </section>
+
+        <!-- เพลง -->
+        <audio id="loveSong" loop preload="none"></audio>
+
+        <button class="music-button" id="musicButton">
+            🎵 เปิดเพลง
+        </button>
+
+    </main>
+
+    <div id="heartsContainer"></div>
+
+    <script src="3.js"></script>
+</body>
+</html>
